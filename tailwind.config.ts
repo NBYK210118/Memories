@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -8,6 +9,12 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        lumanosimo:["var(--font-lumanosimo)"],
+        inter:["var(--font-inter)"],
+        libre_bodoni: ["var(--font-libre-bodoni)"],
+        oranienbaum:["var(--font-oranienbaum)"]
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
