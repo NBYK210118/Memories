@@ -1,9 +1,9 @@
 "use client";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { AdImages, Images, UserImages } from "./default_img";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import FeedAd from "./ui/home/FeedAd";
 import ImageUploadModal from "./ui/home/Modal";
 import { Navigation } from "./ui/home/navigation";
@@ -13,14 +13,14 @@ export default function Home() {
     { src: AdImages.AdSample1, position: "left", topValue: 100 },
     { src: AdImages.AdSample2, position: "right", topValue: 100 },
   ]);
-  const [removedAds, setRemovedAds] = useState<{ src: StaticImageData; topValue: number; position: string; time: number }[]>([]);
+  // const [removedAds, setRemovedAds] = useState<{ src: StaticImageData; topValue: number; position: string; time: number }[]>([]);
   const [showModal, setShowModal] = useState<boolean>(false);
-  const [showWelcome, setShowWelcome] = useState<boolean>(true);
+  // const [showWelcome, setShowWelcome] = useState<boolean>(true);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setShowWelcome(false), 3000);
-    return () => clearTimeout(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setTimeout(() => setShowWelcome(false), 3000);
+  //   return () => clearTimeout(timer);
+  // }, []);
 
   return (
     <div className="bg-background text-foreground">
@@ -61,8 +61,8 @@ export default function Home() {
         />
         <div className="absolute inset-0 flex items-center justify-center text-center px-6 bg-black/30 text-white text-opacity-90">
           <p className="text-2xl font-medium max-w-4xl font-oranienbaum">
-          "Celebrate the unique bond you share with your furry friend by turning their charm into a beautiful piece of art, crafted with love and care.
-           Every wag of the tail, every gentle purr, and every loving gaze holds a story-one of companionship, joy, and unconditional love. Our skilled artists transform your cherished memories into stunning hand-drawn sketches, preserving the essence of your beloved pet in a timeless masterpiece."
+          &quot;Celebrate the unique bond you share with your furry friend by turning their charm into a beautiful piece of art, crafted with love and care.
+           Every wag of the tail, every gentle purr, and every loving gaze holds a story-one of companionship, joy, and unconditional love. Our skilled artists transform your cherished memories into stunning hand-drawn sketches, preserving the essence of your beloved pet in a timeless masterpiece.&quot;
           </p>
         </div>
         <div className="absolute inset-0 flex justify-center items-end m-16">
@@ -87,7 +87,7 @@ export default function Home() {
               topValue={150}
               position={ad.position}
               widthHeight="w-64 h-96"
-              setRemovedAds={setRemovedAds}
+              // setRemovedAds={setRemovedAds}
               setAds={setAds}
             />
             )
@@ -104,7 +104,7 @@ export default function Home() {
               topValue={150}
               position={ad.position}
               widthHeight="w-64 h-96"
-              setRemovedAds={setRemovedAds}
+              // setRemovedAds={setRemovedAds}
               setAds={setAds}
             />
             )
@@ -121,8 +121,8 @@ export default function Home() {
               className="w-96 h-96 object-cover rounded-lg"
             />
             <p className="text-center md:text-left leading-relaxed">
-            "Every pet has a story, and we turn that story into art."
-            Capture the joy and innocence of your furry friend with a custom hand-drawn sketch. Our artists meticulously craft each portrait to reflect your pet’s unique personality and charm, creating a keepsake you’ll treasure forever.
+            &quot;Every pet has a story, and we turn that story into art.&quot;
+            Capture the joy and innocence of your furry friend with a custom hand-drawn sketch. Our artists meticulously craft each portrait to reflect your pet&apos;s unique personality and charm, creating a keepsake you&apos;ll treasure forever.
             </p>
           </div>
           <div className="flex flex-col md:flex-row-reverse items-center gap-6">
@@ -132,8 +132,8 @@ export default function Home() {
               className="w-96 h-96 object-cover rounded-lg"
             />
             <p className="text-center md:text-left leading-relaxed">
-            "A heartfelt way to keep your beloved pet close, always."
-            Whether it’s a special gift or a tribute to a cherished companion, our pet portraits preserve the love and connection you share. Each artwork is thoughtfully designed to evoke emotion and bring happy memories to life.
+            &quot;A heartfelt way to keep your beloved pet close, always.&quot;
+            Whether it&apos;s a special gift or a tribute to a cherished companion, our pet portraits preserve the love and connection you share. Each artwork is thoughtfully designed to evoke emotion and bring happy memories to life.
             </p>
           </div>
           <div className="flex flex-col md:flex-row items-center gap-6">
@@ -143,8 +143,8 @@ export default function Home() {
               className="w-96 h-96 object-cover rounded-lg leading-relaxed"
             />
             <p className="text-center md:text-left">
-            "Transform your favorite moments into timeless art."
-            With a blend of creativity and passion, we transform your pet’s best moments into stunning hand-drawn sketches. From playful smiles to soulful eyes, every detail is captured beautifully—because your pet deserves a masterpiece.
+            &quot;Transform your favorite moments into timeless art.&quot;
+            With a blend of creativity and passion, we transform your pet&apos;s best moments into stunning hand-drawn sketches. From playful smiles to soulful eyes, every detail is captured beautifully—because your pet deserves a masterpiece.
             </p>
           </div>
         </div>

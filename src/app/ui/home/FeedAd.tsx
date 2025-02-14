@@ -15,21 +15,21 @@ interface FeedAdProps {
   topValue: number;
   position: string;
   widthHeight: string;
-  setRemovedAds: React.Dispatch<React.SetStateAction<{ src: StaticImageData; topValue: number; position: string; time: number }[]>>;
+  // setRemovedAds: React.Dispatch<React.SetStateAction<{ src: StaticImageData; topValue: number; position: string; time: number }[]>>;
   setAds: React.Dispatch<React.SetStateAction<{ src: StaticImageData; position: string; topValue: number }[]>>;
 }
 
 const FeedAdComponent: React.FC<FeedAdProps> = ({
-  ads,
+  // ads,
   src,
   index,
   left_classname = '',
   right_classname = '',
-  isFirstTwoAds,
+  // isFirstTwoAds,
   topValue,
   position,
   widthHeight,
-  setRemovedAds,
+  // setRemovedAds,
   setAds,
 }) => {
   const [scrollY, setScrollY] = useState<number>(0);
@@ -43,11 +43,11 @@ const FeedAdComponent: React.FC<FeedAdProps> = ({
     }
   }, []);
 
-  const removeAd = (adIndex: number, topValue: number, position: string) => {
-    setRemovedAds((prev) => [
-      ...prev,
-      { src: ads[adIndex].src, topValue, position, time: Date.now() },
-    ]);
+  const removeAd = (adIndex: number) => {
+    // setRemovedAds((prev) => [
+    //   ...prev,
+    //   { src: ads[adIndex].src, topValue, position, time: Date.now() },
+    // ]);
     setAds((prevAds) => prevAds.filter((_, i) => i !== adIndex));
   };
 
@@ -61,7 +61,7 @@ const FeedAdComponent: React.FC<FeedAdProps> = ({
             : "-translate-y-20 opacity-0 transition-all duration-500"
       }`}
       topValue={topValue+200}
-      onClose={() => removeAd(index, topValue, position)}
+      onClose={() => removeAd(index)}
     />
   );
 };

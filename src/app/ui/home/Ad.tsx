@@ -22,7 +22,7 @@ const AdComponent: React.FC<AdProps> = ({ className = "", src, topValue, widthHe
             className="absolute top-[0.4rem] left-[0.45rem] p-1 text-black bg-slate-100/50 cursor-pointer"
             onClick={() => {
               setCloseBtn(true);
-              onClose && onClose();
+              onClose();
             }}
           >
             <XMarkIcon className="h-5 w-5" />

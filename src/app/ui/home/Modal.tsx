@@ -15,16 +15,6 @@ const ImageUploadModal: React.FC<ModalProps> = React.memo(({ showModal, setShowM
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  // 불필요하게 재생성되지 않도록 최적화
-  const handleFileChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-
-    setSelectedImage(URL.createObjectURL(file));
-    setIsLoading(true);
-    handlePredict(file);
-  }, []);
-
   const handlePredict = useCallback(async (file: File) => {
     try {
       setIsLoading(true);
@@ -57,6 +47,18 @@ const ImageUploadModal: React.FC<ModalProps> = React.memo(({ showModal, setShowM
       setIsLoading(false);
     }
   }, []);
+
+  // 불필요하게 재생성되지 않도록 최적화
+  const handleFileChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    setSelectedImage(URL.createObjectURL(file));
+    setIsLoading(true);
+    handlePredict(file);
+  }, [handlePredict]);
+
+  
 
   const handleDownload = async () => {
     if (!generatedImage) return;
@@ -105,7 +107,7 @@ const ImageUploadModal: React.FC<ModalProps> = React.memo(({ showModal, setShowM
         </button>
 
         {/* 제목 및 설명 */}
-        <h2 className="text-2xl font-bold text-center mb-2">Let's convert your Image!</h2>
+        <h2 className="text-2xl font-bold text-center mb-2">Let&apos;s convert your Image!</h2>
         {errorMessage && <p className="text-red-500 text-center font-semibold">{errorMessage}</p>}
         <p className="text-lg text-center text-gray-600 mb-4">
           {generatedImage ? (
@@ -146,5 +148,7 @@ const ImageUploadModal: React.FC<ModalProps> = React.memo(({ showModal, setShowM
     </div>
   );
 });
+
+ImageUploadModal.displayName = "ImageUploadModal";
 
 export default ImageUploadModal;
