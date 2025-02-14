@@ -51,6 +51,10 @@
 
 ---
 
+### 아직 구현되지 않은 부분
+
+- Home, Contact, About us 페이지와 Sign Up의 기능은 아직 구현되지 않았습니다
+
 ## 📌 프로젝트 관련 문의
 프로젝트 관련 문의는 Issue를 생성하거나, 아래 이메일로 연락 주세요.
 E-mail : eunho9932@gmail.com
