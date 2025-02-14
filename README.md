@@ -51,9 +51,6 @@
 
 ---
 
-## 📌 프로젝트 실행 방법
-
-### 1️⃣ 클론 및 의존성 설치
-```sh
-git clone https://github.com/your-repo/memories.git
-cd memories
+## 📌 프로젝트 관련 문의
+프로젝트 관련 문의는 Issue를 생성하거나, 아래 이메일로 연락 주세요.
+E-mail : eunho9932@gmail.com
