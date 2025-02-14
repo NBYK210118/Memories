@@ -7,8 +7,7 @@
 ---
 
 ## 🎥 서비스 시연 영상
-[▶️ 서비스 시연 영상 보기](https://drive.google.com/file/d/1Ca6Jjq2e-ZWte4s-6mvcklrR55Biix_-/view?usp=drive_link)
-
+[▶️ 서비스 시연 영상 보기](https://drive.google.com/file/d/1v8ipOuASBPnRNdRcHlZWxvBixFZpoB34/view?usp=drive_link)
 
 ---
 
