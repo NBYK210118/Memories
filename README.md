@@ -1,5 +1,8 @@
 # 🐶 Memories - AI-Powered Pet Sketch Service 🖌️
 
+### 사용된 Pix2Pix 에 대한 정보는 https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix 코드를 참고하였고,
+### 해당 모델에 대한 자세한 정보는 Unpaired Image-to-Image Translation using Cycle-Consistent Adversarial Networks 논문을 통해 확인하실 수 있습니다.
+
 ## 📝 프로젝트 소개
 **Memories**는 반려동물의 소중한 순간을 예술적인 스케치로 변환하는 AI 기반 웹 애플리케이션입니다.  
 사용자는 반려동물 사진을 업로드하면, AI가 이를 수작업으로 그린 듯한 스케치로 변환해 줍니다.
