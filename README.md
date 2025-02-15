@@ -44,7 +44,7 @@
 ## ⚙️ 기술 스택
 
 ### 💻 Frontend
-- **Framework:** Next.js  
+- **Framework:** Next.js  + Typescript 
 - **Language:** TypeScript  
 - **Styling:** TailwindCSS  
 
