@@ -45,7 +45,6 @@
 
 ### 💻 Frontend
 - **Framework:** Next.js  + Typescript 
-- **Language:** TypeScript  
 - **Styling:** TailwindCSS  
 
 ### 🔧 Backend
